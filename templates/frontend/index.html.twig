@@ -47,7 +47,7 @@
                             <div class="single-course">
                                 <div class="thum">
                                     <div class="image">
-                                        <img src="{{ asset('frontend/images/course/cu-1.jpg') }}" alt="Course">
+                                        <img src="{% if c.type and c.type.imageName %}{{ asset("uploads/type/"~c.type.imageName) }}{% else %}{{ asset('frontend/images/course/cu-1.jpg') }}{% endif %}" alt="Course">
                                     </div>
                                     <div class="sem">
                                         <span>{{ c.semestre }}</span>
