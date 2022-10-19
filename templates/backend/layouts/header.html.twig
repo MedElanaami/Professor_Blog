@@ -1,0 +1,49 @@
+<div class="page-header">
+    <!-- LEFTSIDE header -->
+    <div class="leftside-header">
+
+        <div id="menu-toggle" class="visible-xs toggle-left-sidebar" data-toggle-class="left-sidebar-open" data-target="html">
+            <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+        </div>
+    </div>
+    <!-- RIGHTSIDE header -->
+    <div class="rightside-header">
+        <div class="header-middle"></div>
+        <!--NOCITE HEADERBOX-->
+        <div class="header-section hidden-xs" id="notice-headerbox">
+            <div class="header-separator"></div>
+        </div>
+        <!--USER HEADERBOX -->
+        <div class="header-section" id="user-headerbox">
+            <div class="user-header-wrap">
+                <div class="user-photo">
+                    <img alt="profile photo" src="{{asset('backend/images/avatar/avatar_1.jpg')}}" />
+                </div>
+                <div class="user-info">
+                    <span class="user-name">{{ app.user.nom }} {{ app.user.prenom }}</span>
+                    <span class="user-profile">Admin</span>
+                </div>
+                <i class="fa fa-plus icon-open" aria-hidden="true"></i>
+                <i class="fa fa-minus icon-close" aria-hidden="true"></i>
+            </div>
+            <div class="user-options dropdown-box">
+                <div class="drop-content basic">
+                    <ul>
+                        <li> <a href="{{ path('admin_profile') }}"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-separator"></div>
+        <!--Store -->
+        <div class="header-section">
+            <a href="#"> <i class="fa fa-store log-out" aria-hidden="true"></i></a>
+        </div>
+        <div class="header-separator"></div>
+        <!--Log out -->
+        <div class="header-section">
+            <a href="{{ path('app_logout') }}" data-toggle="tooltip" data-placement="left" title="Logout"><i class="fa fa-sign-out log-out" aria-hidden="true"></i></a>
+        </div>
+    </div>
+</div>

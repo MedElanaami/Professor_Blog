@@ -1,0 +1,148 @@
+<div class="left-sidebar">
+    <!-- left sidebar HEADER -->
+    <div class="left-sidebar-header">
+        <div class="left-sidebar-title">Navigation</div>
+        <div class="left-sidebar-toggle c-hamburger c-hamburger--htla hidden-xs"
+             data-toggle-class="left-sidebar-collapsed" data-target="html">
+            <span></span>
+        </div>
+    </div>
+    <!-- NAVIGATION -->
+    <!-- ========================================================= -->
+    <div id="left-nav" class="nano">
+        <div class="nano-content">
+            <nav>
+                <ul class="nav nav-left-lines" id="main-nav">
+                    <!--HOME-->
+                    <li class="active-item"><a href="{{ path('admin_accueil') }}"><i class="fa fa-home" aria-hidden="true"></i><span>Accueil</span></a>
+                    </li>
+                 {#   <!--Commandes-->
+                    <li class="has-child-item close-item">
+                        <a><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Commandes</span></a>
+                        <ul class="nav child-nav level-1">
+                            <li><a href="{{ path('admin_commande_index') }}">Liste de commandes</a></li>
+                            <li><a href="{{ path('admin_commande_new') }}">Ajouter commande</a></li>
+                            <!--STATUS-->
+                            <li class="has-child-item close-item">
+                                <a>Status</a>
+                                <ul class="nav child-nav level-1">
+                                    <li><a href="{{ path('app_status_index') }}">Liste des status</a></li>
+                                    <li><a href="{{ path('app_status_new') }}">Ajouter un status</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <!--PRODUITS-->
+                    <li class="has-child-item close-item">
+                        <a><i class="fa fa-cart-plus" aria-hidden="true"></i><span>Produits</span></a>
+                        <ul class="nav child-nav level-1">
+                            <li><a href="{{ path('app_produit_index') }}">Liste de produits</a></li>
+                            <li><a href="{{ path('app_produit_new') }}">Ajouter produit</a></li>
+
+                        </ul>
+                    </li>
+                    <!--COUPONS-->
+                    <li class="has-child-item close-item">
+                        <a><i class="fa-solid fa-gift"></i><span>Coupon</span> </a>
+                        <ul class="nav child-nav level-1">
+                            <li><a href="{{ path('app_coupon_index') }}">Liste des Coupons</a></li>
+                            <li><a href="{{ path('app_coupon_new') }}">Ajouter un Coupon</a></li>
+                        </ul>
+                    </li>
+                    <!--TYPEREDUCTION-->
+                    <li class="has-child-item close-item">
+                        <a><i class="fa-solid fa-chart-line"></i><span>Types Reduction</span> </a>
+                        <ul class="nav child-nav level-1">
+                            <li><a href="{{ path('app_typeReduction_index') }}">Liste des types de reduction</a></li>
+                            <li><a href="{{ path('app_typeReduction_new') }}">Ajouter un type de reduction</a></li>
+                        </ul>
+                    </li>
+                    <!--CATEGORIES-->
+                    <li class="has-child-item close-item">
+                        <a><i class="fa fa-list" aria-hidden="true"></i><span>Categories</span> </a>
+                        <ul class="nav child-nav level-1">
+                            <li><a href="{{ path('app_categorie_index') }}">Liste de categories</a></li>
+                            <li><a href="{{ path('app_categorie_new') }}">Ajouter Categorie</a></li>
+                        </ul>
+                    </li>
+                    <!--TAG-->
+                    <li class="has-child-item close-item">
+                        <a><i class="fa fa-tags" aria-hidden="true"></i><span>Tags</span> </a>
+                        <ul class="nav child-nav level-1">
+                            <li><a href="{{ path('admin_tag_index') }}">Liste de tags</a></li>
+                            <li><a href="{{ path('admin_tag_new') }}">Ajouter des tag</a></li>
+                        </ul>
+                    </li>
+                    <!--SLIDERS-->
+                    <li class="has-child-item close-item">
+                        <a><i class="fa fa-image" aria-hidden="true"></i><span>Sliders</span> </a>
+                        <ul class="nav child-nav level-1">
+                            <li><a href="{{ path('app_slider_index') }}">Liste de sliders</a></li>
+                            <li><a href="{{ path('app_slider_new') }}">Ajouter slider</a></li>
+                        </ul>
+                    </li>
+                    <!--Livraison-->
+                    <li class="has-child-item close-item">
+                        <a><i class="fa fa-truck" aria-hidden="true"></i><span>Livraison</span> </a>
+                        <ul class="nav child-nav level-1">
+                            <li><a href="{{ path('admin_livraison_index') }}">Liste de livraisons</a></li>
+                            <li><a href="{{ path('admin_livraison_new') }}">Ajouter des livraisons</a></li>
+                        </ul>
+                    </li>
+                    <!--VILLES-->
+                    <li class="has-child-item close-item">
+                        <a><i class="fa fa-map-marker" aria-hidden="true"></i><span>Villes</span> </a>
+                        <ul class="nav child-nav level-1">
+                            <li><a href="{{ path('app_ville_index') }}">Liste de villes</a></li>
+                            <li><a href="{{ path('app_ville_new') }}">Ajouter ville</a></li>
+                        </ul>
+                    </li>#}
+                    <li class="has-child-item close-item">
+                        <a><i class="fa fa-folder-open" aria-hidden="true"></i><span>Cours</span> </a>
+                        <ul class="nav child-nav level-1">
+                            <li><a href="{{ path('admin_cours_index') }}">Liste de cours</a></li>
+                            <li><a href="{{ path('admin_cours_new') }}">Ajouter un cours</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-child-item close-item">
+                        <a><i class="fa fa-file" aria-hidden="true"></i><span>Types de cours</span> </a>
+                        <ul class="nav child-nav level-1">
+                            <li><a href="{{ path('admin_type_index') }}">Liste de type</a></li>
+                            <li><a href="{{ path('admin_type_new') }}">Ajouter un type</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-child-item close-item">
+                        <a><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>Semestres</span> </a>
+                        <ul class="nav child-nav level-1">
+                            <li><a href="{{ path('admin_semestre_index') }}">Liste des Semestres</a></li>
+                            <li><a href="{{ path('admin_semestre_new') }}">Ajouter semestre</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-child-item close-item">
+                        <a><i class="fa fa-blog" aria-hidden="true"></i><span>Blogs</span> </a>
+                        <ul class="nav child-nav level-1">
+                            <li><a href="{{ path('admin_blog_index') }}">Liste de blogs</a></li>
+                            <li><a href="{{ path('admin_blog_new') }}">Ajouter un blog</a></li>
+                        </ul>
+                    </li>
+                    <!--NEWSLETTER-->
+                    <li class="has-child-item close-item">
+                        <a><i class="fa fa-envelope-open" aria-hidden="true"></i><span>Newsletters</span> </a>
+                        <ul class="nav child-nav level-1">
+                            <li><a href="{{ path('admin_newsletter_index') }}">Liste de newsletter</a></li>
+                            <li><a href="{{ path('admin_newsletter_new') }}">Ajouter newsletter</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-child-item close-item">
+                        <a><i class="fa fa-cog" aria-hidden="true"></i><span>Parametre</span> </a>
+                        <ul class="nav child-nav level-1">
+                            <li><a href="{{ path('admin_parametre_index') }}">Liste de parametre</a></li>
+                            <li><a href="{{ path('admin_parametre_new') }}">Ajouter des parametre</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
