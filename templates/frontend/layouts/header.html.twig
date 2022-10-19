@@ -17,7 +17,7 @@
                         <div class="social d-flex">
                             <span class="follow-us">Suivez-moi :</span>
                             <ul>
-                                <li><a href="https://web.facebook.com/anas.moutia.10"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="https://facebook.com/anas.moutia.10"><i class="fa fa-facebook-f"></i></a></li>
                                 <li><a href="https://www.linkedin.com/in/anas-moutia-62294622/?originalSubdomain=ma"><i class="fa fa-linkedin"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             </ul>
@@ -53,7 +53,7 @@
                                     <a  {% if page=='accueil' %}class="active"{% endif %} href="{{ path('app_accueil') }}">Accueil</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#"  {% if page=='bio' %}class="active"{% endif %}>Biographie</a>
+                                    <a  {% if page=='bio' %}class="active"{% endif %} href="{{ path('app_bio') }}">Biographie</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#"  {% if page=='course' %}class="active"{% endif %}>Courses</a>
