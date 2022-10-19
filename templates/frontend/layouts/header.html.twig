@@ -56,10 +56,10 @@
                                     <a href="#"  {% if page=='bio' %}class="active"{% endif %}>Biographie</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#"  {% if page=='course' %}class="active"{% endif %}>Courses</a>
+                                    <a href="#"  {% if page=='cours' %}class="active"{% endif %}>Cours</a>
                                     <ul class="sub-menu">
                                         {% for c in semestres() %}
-                                        <li><a href="#">{{ c }}</a></li>
+                                        <li><a href="{{ path('app_semestre', {'id': c.id}) }}">{{ c }}</a></li>
                                         {% endfor %}
 
 
