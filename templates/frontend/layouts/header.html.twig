@@ -24,7 +24,7 @@
                         </div> <!-- social -->
                         <div class="login-register">
                             <ul>
-                                <li><a href="register.html">Connexion</a></li>
+                                <li><a href="{{ path('app_login') }}">Connexion</a></li>
                             </ul>
                         </div>
                     </div> <!-- header right -->
@@ -50,32 +50,32 @@
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
-                                    <a class="active" href="{{ path('app_accueil') }}">Accueil</a>
+                                    <a  {% if page=='accueil' %}class="active"{% endif %} href="{{ path('app_accueil') }}">Accueil</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#">Biographie</a>
+                                    <a href="#"  {% if page=='bio' %}class="active"{% endif %}>Biographie</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="courses.html">Courses</a>
+                                    <a href="#"  {% if page=='course' %}class="active"{% endif %}>Courses</a>
                                     <ul class="sub-menu">
-                                        <li><a href="courses.html">S1</a></li>
-                                        <li><a href="courses.html">S1</a></li>
-                                        <li><a href="courses.html">S1</a></li>
-                                        <li><a href="courses.html">S1</a></li>
+                                        {% for c in semestres() %}
+                                        <li><a href="#">{{ c }}</a></li>
+                                        {% endfor %}
+
 
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="events.html">Activités </a>
+                                    <a  {% if page=='activite' %}class="active"{% endif %}href="#">Activités </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="blog.html">Articles</a>
+                                    <a  {% if page=='article' %}class="active"{% endif %}href="#">Articles</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="blog.html">Blogs</a>
+                                    <a  {% if page=='blog' %}class="active"{% endif %}href="#">Blogs</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="{{ path('app_contact') }}">Contact</a>
+                                <li class="nav-item ">
+                                    <a  {% if page=='contact' %}class="active"{% endif %}href="{{ path('app_contact') }}">Contact</a>
                                 </li>
                             </ul>
                         </div>
