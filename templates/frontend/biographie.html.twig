@@ -1,0 +1,86 @@
+{% extends 'frontend/layouts/base.html.twig' %}
+{% set page="bio" %}
+{% block content %}
+    <section id="page-banner" class="pt-105 pb-130 bg_cover" data-overlay="8" style="background-image: url(images/page-banner-1.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-banner-cont">
+                        <h2>Biographie</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{{ path('app_accueil') }}">Accueil</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Biographie</li>
+                            </ol>
+                        </nav>
+                    </div> <!-- page banner cont -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <section id="teachers-single" class="pt-70 pb-120 gray-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-8">
+                    <div class="teachers-left mt-50">
+                        <div class="hero">
+                            <img src="{{ asset('frontend/images/about/profile.jpg') }}" alt="Profile">
+                        </div>
+                        <div class="name">
+                            <h6>DR. Anas Moutia</h6>
+                            <span>Enseignant chercheur à l'Université cadi Ayyad</span>
+                            <span>Spécialité : Analyse du discours -Linguistique</span>
+                        </div>
+                        <div class="social">
+                            <ul>
+                                <li><a href="https://facebook.com/anas.moutia.10"><i class="fa fa-facebook-square"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/anas-moutia-62294622/?originalSubdomain=ma"><i class="fa fa-linkedin-square"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                            </ul>
+                        </div>
+                    </div> <!-- teachers left -->
+                </div>
+                <div class="col-lg-8">
+                    <div class="teachers-right mt-50">
+                        <ul class="nav nav-justified" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="active" id="etude-tab" data-toggle="tab" href="#etude" role="tab" aria-controls="etude" aria-selected="true">Etude</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="exp-tab" data-toggle="tab" href="#exp" role="tab" aria-controls="exp" aria-selected="false">Expériences professionnelles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="act-tab" data-toggle="tab" href="#act" role="tab" aria-controls="act" aria-selected="false">Activités scientifique</a>
+                            </li>
+                        </ul> <!-- nav -->
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="etude" role="tabpanel" aria-labelledby="etude-tab">
+                                <div class="etude-cont">
+                                    <div class="single-etude pt-40">
+                                        <h5>About</h5>
+                                        <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
+                                    </div> <!-- single etude -->
+                                    <div class="single-etude pt-40">
+                                        <h5>Acchivments</h5>
+                                        <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
+                                    </div> <!-- single etude -->
+                                    <div class="single-etude pt-40">
+                                        <h5>My Objective</h5>
+                                        <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .</p>
+                                    </div> <!-- single etude -->
+                                </div> <!-- etude cont -->
+                            </div>
+                            <div class="tab-pane fade" id="exp" role="tabpanel" aria-labelledby="exp-tab">
+
+                            </div>
+                            <div class="tab-pane fade" id="act" role="tabpanel" aria-labelledby="act-tab">
+
+                            </div>
+                        </div> <!-- tab content -->
+                    </div> <!-- teachers right -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+{% endblock %}
