@@ -41,10 +41,10 @@ class Cours
     #[Vich\UploadableField(mapping: 'cours', fileNameProperty: 'pdfName', size: 'pdfSize')]
     private ?File $pdfFile = null;
 
-    #[ORM\Column(type: 'string')]
+    #[ORM\Column(type: 'string',nullable: true)]
     private ?string $pdfName = null;
 
-    #[ORM\Column(type: 'integer')]
+    #[ORM\Column(type: 'integer',nullable: true)]
     private ?int $pdfSize = null;
 
     public function getId(): ?int
