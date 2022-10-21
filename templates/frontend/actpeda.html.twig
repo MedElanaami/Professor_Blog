@@ -1,0 +1,106 @@
+{% extends 'frontend/layouts/base.html.twig' %}
+{% set page="activite" %}
+{% block content %}
+    <section id="page-banner" class="pt-105 pb-130 bg_cover" data-overlay="8"
+             style="background-image: url({{ asset('frontend/images/page-banner-1.jpg') }})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-banner-cont">
+                        <h2>Activités Pédagogiques</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{{ path('app_accueil') }}">Accueil</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Activités Pédagogiques</li>
+                            </ol>
+                        </nav>
+                    </div> <!-- page banner cont -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <div class="col-lg-12">
+        <div class="teachers-right mt-50">
+            <ul class="nav nav-justified" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a
+                            class="active"
+                            id="dashboard-tab"
+                            data-toggle="tab"
+                            href="#dashboard"
+                            role="tab"
+                            aria-controls="dashboard"
+                            aria-selected="true"
+                    >Activités Pédagogiques</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                            id="courses-tab"
+                            data-toggle="tab"
+                            href="#courses"
+                            role="tab"
+                            aria-controls="courses"
+                            aria-selected="false"
+                    >Courses</a
+                    >
+                </li>
+
+            </ul>
+            <!-- nav -->
+            <div class="tab-content" id="myTabContent">
+                <div
+                        class="tab-pane fade show active"
+                        id="dashboard"
+                        role="tabpanel"
+                        aria-labelledby="dashboard-tab">
+                    <div class="dashboard-cont">
+                        <div class="single-dashboard pt-40">
+                            <h5>Responsable Pédagogique</h5>
+                            <p>
+                                Ex coordonnateur de filière de cycle de licence en éducation option Français.
+                            </p>
+                        </div>
+                        <!-- single dashboard -->
+                    </div>
+                    <!-- dashboard cont -->
+                </div>
+                <div
+                        class="tab-pane fade"
+                        id="courses"
+                        role="tabpanel"
+                        aria-labelledby="courses-tab">
+                    <div class="courses-cont pt-20">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="sub-menu text-center">
+                                    {% for c in semestres() %}
+                                        <a href="{{ path('app_semestre', {'id': c.id}) }}">
+                                            <span class="single-category text-center color-1 p-5 mt-4 ">
+                                                <span class="icon">
+                                                    <img src="{{ asset('frontend/images/all-icon/ctg-3.png') }}"
+                                                         alt="Icon"/>
+                                                 </span>
+                                                <span class="cont">
+                                                  <span>{{ c }}</span>
+                                                 </span>
+                                            </span>
+                                            <!-- single category -->
+                                        </a>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!-- row -->
+                    </div>
+                    <!-- courses cont -->
+                </div>
+
+            </div>
+            <!-- tab content -->
+        </div>
+        <!-- teachers right -->
+    </div>
+{% endblock %}

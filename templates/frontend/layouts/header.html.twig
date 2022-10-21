@@ -53,12 +53,11 @@
 {#                                        {% for c in semestres() %}#}
 {#                                        <li><a href="{{ path('app_semestre', {'id': c.id}) }}">{{ c }}</a></li>#}
 {#                                        {% endfor %}#}
-
-
+{#                                        #}
 {#                                    </ul>#}
                                 </li>
                                 <li class="nav-item">
-                                    <a  {% if page=='activite' %}class="active"{% endif %}href="#">activités pédagogiques</a>
+                                    <a  {% if page=='activite' %}class="active"{% endif %}href="{{ path('app_actpeda') }}">activités pédagogiques</a>
                                 </li>
 
                                 <li class="nav-item ">
