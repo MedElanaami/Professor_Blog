@@ -16,11 +16,7 @@ class CoursType extends AbstractType
     {
         $builder
             ->add('nom')
-            ->add('url')
-            ->add('auteur')
-            ->add('type')
             ->add('semestre')
-            ->add('description',CKEditorType::class)
             ->add('pdfFile', VichFileType::class, [
                 'required' => false,
                 'allow_delete' => true,
