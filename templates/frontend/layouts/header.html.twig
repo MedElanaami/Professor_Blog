@@ -1,25 +1,17 @@
 <!--====== HEADER PART START ======-->
 
 <header id="header-part">
-    <div class="header-top d-none d-lg-block">
+    <div class="header-top  d-lg-block">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="header-contact">
-                        <ul>
-                            <li><i class="fa fa-envelope"></i><a href="mailto:anas.moutia@gmail.com">anas.moutia@gmail.com</a></li>
-                            <li><i class="fa fa-phone"></i><span>+212663-694400</span></li>
-                        </ul>
-                    </div> <!-- header contact -->
-                </div>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="header-right d-flex justify-content-end">
                         <div class="social d-flex">
                             <span class="follow-us">Suivez-moi :</span>
                             <ul>
                                 <li><a href="https://facebook.com/anas.moutia.10"><i class="fa fa-facebook-f"></i></a></li>
                                 <li><a href="https://www.linkedin.com/in/anas-moutia-62294622/?originalSubdomain=ma"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+
                             </ul>
                         </div> <!-- social -->
                         <div class="login-register">
@@ -56,7 +48,7 @@
                                     <a  {% if page=='bio' %}class="active"{% endif %} href="{{ path('app_bio') }}">Biographie</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#"  {% if page=='cours' %}class="active"{% endif %}>Cours</a>
+                                    <a href="#"  {% if page=='cours' %}class="active"{% endif %}>Activités scientifique</a>
                                     <ul class="sub-menu">
                                         {% for c in semestres() %}
                                         <li><a href="{{ path('app_semestre', {'id': c.id}) }}">{{ c }}</a></li>
@@ -66,16 +58,11 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a  {% if page=='activite' %}class="active"{% endif %}href="#">Activités </a>
+                                    <a  {% if page=='activite' %}class="active"{% endif %}href="#">activités pédagogiques</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a  {% if page=='article' %}class="active"{% endif %}href="#">Articles</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a  {% if page=='blog' %}class="active"{% endif %}href="#">Blogs</a>
-                                </li>
+
                                 <li class="nav-item ">
-                                    <a  {% if page=='contact' %}class="active"{% endif %}href="{{ path('app_contact') }}">Contact</a>
+                                    <a  {% if page=='contact' %}class="active"{% endif %}href="{{ path('app_contact') }}">Contactez nous</a>
                                 </li>
                             </ul>
                         </div>
