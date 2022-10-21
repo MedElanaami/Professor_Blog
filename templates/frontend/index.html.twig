@@ -10,19 +10,10 @@
                         <h2>DR. Anas Moutia</h2>
                     </div> <!-- section title -->
                     <div class="about-cont">
-                        <p>Enseignant chercheur à l'Université cadi Ayyad
-                            Spécialité : Analyse du discours -Linguistique</p>
-                        <p> Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons
-                            equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet .
-                            Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt mauris. <br> <br> auci elit cons
-                            equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet .
-                            Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt mauris</p>
-
-                        Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons
-                        equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi
-                        accumsan ipsum velit. Nam nec tellus a odio tincidunt mauris. <br> <br> auci elit cons equat
-                        ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi
-                        accumsan ipsum velit. Nam nec tellus a odio tincidunt mauris</p>
+                        <p>Enseignant chercheur à l'Université Cadi Ayyad</p>
+                          <p>  Spécialité : Analyse du discours -Linguistique</p>
+                      <p> FLSH Université Cadi Ayyad</p>
+                        <h5><a href="mailto:anas.moutia@gmail.com" class="pt-30">anas.moutia@gmail.com</a> </h5>
                     </div>
                 </div> <!-- about cont -->
                 <div class="col-lg-7">
@@ -32,116 +23,6 @@
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
-    </section>
-    {% if cours|length>=3 %}
-    <section id="course-part" class="pt-65 pb-120 gray-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-title pb-15">
-                        <h5>Nos derniers cours</h5>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row course-slide mt-30">
-                {% for c in cours %}
-                        <div class="col-lg-4">
-                            <div class="single-course">
-                                <div class="thum">
-                                    <div class="image">
-                                        <img src="{% if c.type and c.type.imageName %}{{ asset("uploads/type/"~c.type.imageName) }}{% else %}{{ asset('frontend/images/course/cu-1.jpg') }}{% endif %}" alt="Course">
-                                    </div>
-                                    <div class="sem">
-                                        <span>{{ c.semestre }}</span>
-                                    </div>
-                                </div>
-                                <div class="cont" >
-                                    <a href="{{ path('app_cours_detail', {'id': c.id}) }}" ><h4>{{ c.nom }}</h4></a>
-                                    <div class="course-teacher">
-                                        <div class="thum">
-                                            <a href="#"
-                                            ><img src="{{ asset('frontend/images/teachers/quote.png') }}" alt="teacher"
-                                                /></a>
-                                        </div>
-                                        <div class="name">
-                                            <a href="#"><h6>{{ c.auteur }}</h6></a>
-                                        </div>
-                                        <div class="admin">
-                                            <ul>
-                                                <li>
-                                                    <a href="#"
-                                                    ><i class="fa fa-user"></i><span>31</span></a
-                                                    >
-                                                </li>
-                                                <li>
-                                                    <a href="#"
-                                                    ><i class="fa fa-heart"></i><span>10</span></a
-                                                    >
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> <!-- single course -->
-                        </div>
-                {% endfor %}
-            </div> <!-- course slide -->
-        </div> <!-- container -->
-    </section>
-    {% endif %}
-    <section id="news-part" class="pt-65 pb-110">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-title pb-15">
-                        <h5>Les derniers articles</h5>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="single-news mt-30">
-                        <div class="news-thum pb-25">
-                            <img src="{{ asset('frontend/images/') }}news/n-1.jpg" alt="News">
-                        </div>
-                        <div class="news-cont">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-
-                            </ul>
-                            <a href="blog-single.html"><h3>Tips to grade high cgpa in university life</h3></a>
-                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit
-                                cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit
-                                amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt .</p>
-                        </div>
-                    </div> <!-- single news -->
-                </div>
-                <div class="col-lg-6">
-                    <div class="single-news news-list">
-                        <div class="single-news news-list">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="news-thum mt-30">
-                                        <img src="{{ asset('frontend/images/') }}news/ns-1.jpg" alt="News">
-                                    </div>
-                                </div>
-                                <div class="col-sm-8">
-                                    <div class="news-cont mt-30">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-
-                                        </ul>
-                                        <a href="blog-single.html"><h3>Intellectual communication</h3></a>
-                                        <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit
-                                            cons vel.</p>
-                                    </div>
-                                </div>
-                            </div> <!-- row -->
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div>
-        </div>
     </section>
 
 {% endblock %}
