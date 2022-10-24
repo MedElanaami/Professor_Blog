@@ -76,8 +76,9 @@
                             <div class="col-md-12">
                                 <ul class="sub-menu text-center">
                                     {% for c in semestres() %}
+                                        {% if c.cours|length >0 %}
                                         <a href="{{ path('app_semestre', {'id': c.id}) }}">
-                                            <span class="single-category text-center color-1 p-5 mr-2 ">
+                                            <span class="single-category text-center color-1 p-5 m-2 ">
                                                 <span class="icon">
                                                     <img src="{{ asset('frontend/images/all-icon/ctg-3.png') }}"
                                                          alt="Icon"/>
@@ -88,6 +89,7 @@
                                             </span>
                                             <!-- single category -->
                                         </a>
+                                        {% endif %}
                                     {% endfor %}
                                 </ul>
                             </div>

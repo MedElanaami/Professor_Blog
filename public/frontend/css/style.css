@@ -1316,9 +1316,9 @@ p {
     color: #ffc600;
     margin-right: 3px;
 }
-.about-event ul li .single-event a {
-    display: block;
-}
+/*.about-event ul li .single-event a {*/
+/*    display: block;*/
+/*}*/
 .about-event ul li .single-event a h4 {
     padding-top: 5px;
     padding-bottom: 10px;
